@@ -1,247 +1,147 @@
-<% @title = "FOI officer questions" %>
+<% @title = "Megkeresésekre válaszoló munkatársakra vonatkozó kérdések" %>
 
 <%= render :partial => 'sidebar' %>
+
 <div id="left_column_flip">
+  <h1 id="officers"><%= @title %> <a href="#officers">#</a> </h1>
 
-<h1 id="officers"><%= @title %> <a href="#officers">#</a> </h1>
+  <dl>
 
-<dl>
+  <dt id="top">A k&ouml;z&eacute;rdekû adatig&eacute;nyl&eacute;st tartalmaz&oacute; lap alj&aacute;r&oacute;l jutottam ide. Mirõl is van sz&oacute;? <a href="#top">#</a> </dt>
 
-<dt id="top">I just got here from bottom of an FOI request, what is going on? <a href="#top">#</a> </dt>
+  <dd><p>A KiMitTud egy j&oacute;t&eacute;konys&aacute;gi szervezet &aacute;ltal mûk&ouml;dtetett weboldal szolg&aacute;ltat&aacute;sa. Ahhoz ny&uacute;jt seg&iacute;ts&eacute;get, hogy b&aacute;rki k&ouml;z&eacute;rdekû adatokat ig&eacute;nyelhessen, a v&aacute;laszokat k&ouml;nnyen nyomon k&ouml;vethesse &eacute;s m&aacute;sokkal is megoszthassa.</p>
 
-<dd><p>WhatDoTheyKnow is a service run by a charity. It helps ordinary members
-of the public make FOI requests, and easily track and share the responses.</p>
+  <p>A k&ouml;z&eacute;rdekû adatot valaki a KiMitTud seg&iacute;ts&eacute;g&eacute;vel ig&eacute;nyelte. Az ig&eacute;nyl&eacute;sre ugyan&uacute;gy v&aacute;laszolhat, mintha azt egy mag&aacute;nszem&eacute;lytõl kapta volna. Az egyetlen k&uuml;l&ouml;nbs&eacute;g az, hogy v&aacute;lasz&aacute;t automatikusan nyilv&aacute;nosan el&eacute;rhetõv&eacute; tessz&uuml;k az interneten.
+  </p>
+  <p>Amennyiben agg&aacute;lyai mer&uuml;lnek fel az adatv&eacute;delemmel vagy egy&eacute;b k&eacute;rd&eacute;ssel kapcsolatosan, olvassa el az al&aacute;bbi v&aacute;laszokat. &Eacute;rdemes elolvasnia a <a   href="/help/about">KiMitTud bemutat&aacute;sa</a> c&iacute;mû oldalt is, ahol az oldal mûk&ouml;d&eacute;s&eacute;t a felhaszn&aacute;l&oacute; szempontj&aacute;b&oacute;l ismertetj&uuml;k. Oldalunkon kikeresheti azt a k&ouml;zint&eacute;zm&eacute;nyt is, ahol &Ouml;n dolgozik, &eacute;s megtekintheti az oldalunkon kereszt&uuml;l beny&uacute;jtott adatig&eacute;nyl&eacute;sek &aacute;llapot&aacute;t.
 
-<p>The FOI request you received was made by someone using WhatDoTheyKnow. You can
-simply reply to the request as you would any other request from an individual.
-The only difference is that your response will be automatically published on
-the Internet.
-</p>
-<p>If you have privacy or other concerns, please read the answers below.
-You might also like to read the <a
-href="/help/about">introduction to WhatDoTheyKnow</a> to find out more about what
-the site does from the point of view of a user. You can also search the
-site to find the authority that you work for, and view the status of
-any requests made using the site.
+  <p>&Ouml;r&ouml;mmel vessz&uuml;k, ha a megkeres&eacute;sekre v&aacute;laszol&oacute; munkat&aacute;rsak megosztj&aacute;k vel&uuml;nk megjegyz&eacute;seiket &eacute;s elk&eacute;pzel&eacute;seiket. <a href="/help/contact">Itt tud vel&uuml;nk kapcsolatba l&eacute;pni</a>.
+  </p>
+  </dd>
 
-<p>Finally, we welcome comments and
-thoughts from FOI officers, please <a href="/help/contact">get in touch</a>.
-</p>
-</dd>
+  <dt id="responses">Mi&eacute;rt tessz&uuml;k nyilv&aacute;nosan el&eacute;rhetõv&eacute; a k&ouml;z&eacute;rdekû adatig&eacute;nyl&eacute;sekre adott v&aacute;laszokat? <a href="#responses">#</a> </dt>
 
-<dt id="responses">Why are you publishing responses to FOI requests? <a href="#responses">#</a> </dt>
+  <dd>&Uacute;gy gondoljuk, hogy ez t&ouml;bb szempontb&oacute;l is elõny&ouml;s. A legfontosabb az, hogy ezzel felkelthetj&uuml;k az &aacute;llampolg&aacute;rok &eacute;rdeklõd&eacute;s&eacute;t az &aacute;llam munk&aacute;ja ir&aacute;nt, &eacute;s elõseg&iacute;thetj&uuml;k, hogy abban akt&iacute;vabban r&eacute;szt vegyenek. Abban is rem&eacute;nyked&uuml;nk, hogy weboldalunknak k&ouml;sz&ouml;nhetõen cs&ouml;kken az int&eacute;zm&eacute;nyekhez &eacute;rkezõ olyan adatig&eacute;nyl&eacute;sek sz&aacute;ma, amelyek ugyanarra a k&eacute;rd&eacute;sre vonatkoznak. Mivel az inform&aacute;ci&oacute; szabads&aacute;g&aacute;r&oacute;l sz&oacute;l&oacute; t&ouml;rv&eacute;ny hat&aacute;lya al&aacute; esõ v&aacute;laszok k&ouml;z&eacute;rdekû adatokat tartalmaznak, amelyeket b&aacute;rki kik&eacute;rhet az adott k&ouml;zint&eacute;zm&eacute;nytõl, &uacute;gy v&eacute;lj&uuml;k, semmi ok nem lehet arra, hogy ezeket ne hozzuk nyilv&aacute;noss&aacute;gra.
+  </dd>
 
-<dd>We think there are lots of benefits. Most importantly it will encourage the
-public to be more interested and involved in the work of government. We
-also hope that it will reduce the number of duplicate requests on any
-subject that a public body will receive. Given that Freedom of Information
-responses contain public information, which anybody could easily request
-again from the public authority, we think there should be no reason not to
-publish it widely.
-</dd>
+  <dt id="realpeople">Az adatig&eacute;nylõk val&oacute;s szem&eacute;lyek? <a href="#realpeople">#</a> </dt>
 
-<dt id="realpeople">Are the people making requests real people? <a href="#realpeople">#</a> </dt>
+  <dd>Igen. A v&aacute;laszok nyomon k&ouml;vet&eacute;se &eacute;rdek&eacute;ben minden egyes ig&eacute;nyl&eacute;shez sz&aacute;m&iacute;t&oacute;g&eacute;p &aacute;ltal gener&aacute;lt e-mail c&iacute;met haszn&aacute;lunk. Mielõtt b&aacute;rki elk&uuml;ldhetn&eacute; ig&eacute;nyl&eacute;s&eacute;t, a felhaszn&aacute;l&oacute;knak elõsz&ouml;r regisztr&aacute;lniuk kell magukat a weboldalon egyedi e-mail c&iacute;m megad&aacute;s&aacute;val, amelyet hiteles&iacute;t&uuml;nk. Honlapunkon megkeresheti azt az oldalt, amely az egyes szem&eacute;lyek &aacute;ltal beny&uacute;jtott &ouml;sszes ig&eacute;nyl&eacute;st tartalmazza.
+  </dd>
 
-<dd>Yes. For the purposes of keeping track of responses we use
-computer-generated email addresses for each request. However, before
-they can send a request, each user must register on the site with a
-unique email address that we then verify. You can search this site and
-find a page listing all requests that each person has made.
-</dd>
+  <dt id="email_only">Csup&aacute;n az e-mail c&iacute;m megad&aacute;sa nem el&eacute;g a k&ouml;z&eacute;rdekû adatig&eacute;nyl&eacute;shez! <a href="#email_only">#</a> </dt>
 
-<dt id="email_only">An email isn't a sufficient address for an FOI request! <a href="#email_only">#</a> </dt>
+  <dd>De igen. Az <a href="http://www.whatdotheyknow.com/request/1142/response/2894/attach/5/20080806100741260.pdf">Adatv&eacute;delmi Hivatalnak a Rother K&ouml;rzeti &Ouml;nkorm&aacute;nyzatnak k&uuml;ld&ouml;tt levele</a> &uacute;tmutat&oacute;ul szolg&aacute;l ezen k&eacute;rd&eacute;sre vonatkoz&oacute;an, k&uuml;l&ouml;n&ouml;s tekintettel a KiMitTud rendszeren kereszt&uuml;l k&uuml;ld&ouml;tt ig&eacute;nyl&eacute;seket illetõen.
+  </dd>
 
-<dd>Yes it is. This
-<a href="http://www.whatdotheyknow.com/request/1142/response/2894/attach/5/20080806100741260.pdf">letter from the ICO to Rother District Council</a> gives guidance on the matter, specifically
-in the context of requests made via WhatDoTheyKnow.
-</dd>
+  <dt id="vexatious">Nem arr&oacute;l van sz&oacute;, hogy &Ouml;n&ouml;k rengeteg bosszant&oacute; adatig&eacute;nyl&eacute;st k&uuml;ldenek? <a href="#vexatious">#</a> </dt>
 
-<dt id="vexatious">Aren't you making lots of vexatious requests? <a href="#vexatious">#</a> </dt>
+  <dd><p>A KiMitTud maga nem ig&eacute;nyel adatokat. Az adatig&eacute;nyl&eacute;seket val&oacute;s szem&eacute;lyek &iacute;rj&aacute;k, mi csak tov&aacute;bb&iacute;tjuk ezeket. </p>
+  <p>Ezt egy p&eacute;ld&aacute;val vil&aacute;g&iacute;tjuk meg: ha k&uuml;l&ouml;nb&ouml;zõ szem&eacute;lyek nagy sz&aacute;mban ig&eacute;nyelnek k&ouml;z&eacute;rdekû adatot k&uuml;l&ouml;nf&eacute;le hotmailes e-mail c&iacute;mrõl, nem mondhatjuk azt, hogy a Microsoft k&uuml;ld bosszant&oacute; mennyis&eacute;gû ig&eacute;nyl&eacute;st. Ugyanez a helyzet, ha sok ig&eacute;nyl&eacute;st k&uuml;ldenek el a KiMitTud rendszer seg&iacute;ts&eacute;g&eacute;vel. Tov&aacute;bb&aacute; mivel minden ig&eacute;nyl&eacute;s nyilv&aacute;nos, sokkal egyszerûbben ellenõrizheti, hogy valamelyik felhaszn&aacute;l&oacute; t&eacute;nyleg bosszant&aacute;s c&eacute;lj&aacute;b&oacute;l ny&uacute;jt-e be ig&eacute;nyl&eacute;seket. </p>
+  <p>Amennyiben a k&eacute;rd&eacute;srõl tov&aacute;bbi inform&aacute;ci&oacute;ra van sz&uuml;ks&eacute;ge, olvassa el az <a href="http://www.whatdotheyknow.com/request/1142/response/2894/attach/5/20080806100741260.pdf">Adatv&eacute;delmi Hivatalnak a Rother K&ouml;rzeti &Ouml;nkorm&aacute;nyzat r&eacute;sz&eacute;re k&uuml;ld&ouml;tt level&eacute;t</a>, amely tov&aacute;bbi &uacute;tmutat&oacute;val szolg&aacute;l.</p>
+  </dd>
 
-<dd><p>WhatDoTheyKnow is not making any requests. We are sending requests on
-behalf of our users, who are real people making the requests. </p>
-<p>Look at it like this - if lots of different people made requests from
-different Hotmail email addresses, then you would not think that Microsoft were
-making vexatious requests. It is exactly the same if lots of requests are made
-via WhatDoTheyKnow. Moreover, since all requests are public it is much easier
-for you to see if one of our users is making vexatious requests. </p>
-<p>If that isn't enough for you, the
-<a href="http://www.whatdotheyknow.com/request/1142/response/2894/attach/5/20080806100741260.pdf">letter from the ICO to Rother District Council</a> gives some guidance on the matter.</p>
-</dd>
+  <dt id="spam_problems">L&aacute;tok a KiMitTud rendszer&eacute;ben egy olyan ig&eacute;nyl&eacute;st, amelyet soha nem kaptunk meg e-mailben.<a href="#spam_problems">#</a> </dt>
 
-<dt id="spam_problems">I can see a request on WhatDoTheyKnow, but we never got it by email!<a href="#spam_problems">#</a> </dt>
+  <dd><p>Ha rendszer&uuml;nkben megjelenik egy ig&eacute;nyl&eacute;s, akkor azt e-mailben m&aacute;r elk&uuml;ldt&uuml;k az &eacute;rintett k&ouml;zint&eacute;zm&eacute;ny r&eacute;sz&eacute;re. Ha az ig&eacute;nyl&eacute;st nem siker&uuml;l tov&aacute;bb&iacute;tani, arr&oacute;l automatikusan &uuml;zenet jelenik meg weboldalunkon. Az &aacute;ltalunk haszn&aacute;lt e-mail c&iacute;met a &quot;k&ouml;z&eacute;rdekû adatk&eacute;r&eacute;shez haszn&aacute;lt e-mail c&iacute;m&quot; hivatkoz&aacute;sra kattintva tekintheti meg, amely az adott k&ouml;zint&eacute;zm&eacute;nyre vonatkoz&oacute; oldalon tal&aacute;lhat&oacute;. Amennyiben jobb lenne, ha m&aacute;sik e-mail c&iacute;met haszn&aacute;ln&aacute;nk, <a   href="/help/contact">l&eacute;pjen vel&uuml;nk kapcsolatba</a>.</p>
+  <p>Elõfordulhat, hogy egyes adatig&eacute;nyl&eacute;sek k&eacute;zbes&iacute;t&eacute;s&eacute;re az&eacute;rt nem ker&uuml;l sor, mert az adott k&ouml;zint&eacute;zm&eacute;ny informatikai r&eacute;szlege &aacute;ltal be&aacute;ll&iacute;tott &quot;lev&eacute;lszem&eacute;tszûrõk&quot; ezeket az &uuml;zeneteket elt&aacute;vol&iacute;tott&aacute;k. A k&ouml;zint&eacute;zm&eacute;nyek ezt &uacute;gy tudj&aacute;k elker&uuml;lni, hogy megk&eacute;rik saj&aacute;t informatikai r&eacute;szleg&uuml;ket, hogy a <strong>@kimittud.hu</strong> e-mail c&iacute;met helyezz&eacute;k a kiv&eacute;telek list&aacute;j&aacute;ra. <a href="/help/contact">K&eacute;r&eacute;s&eacute;re</a> b&aacute;rmely ig&eacute;nyl&eacute;st &uacute;jb&oacute;l elk&uuml;ld&uuml;nk, &eacute;s/vagy megadjuk a tov&aacute;bb&iacute;t&aacute;s technikai r&eacute;szleteire vonatkoz&oacute; inform&aacute;ci&oacute;kat, amely alapj&aacute;n az informatikai r&eacute;szleg meg tudja vizsg&aacute;lni, hogy mi t&ouml;rt&eacute;nhetett az adott &uuml;zenettel.
+  </p>
+  <p>Az egyes adatig&eacute;nyl&eacute;sekre ak&aacute;r e-mail n&eacute;lk&uuml;l is v&aacute;laszolhat az ig&eacute;nyl&eacute;si oldal alj&aacute;n tal&aacute;lhat&oacute; &quot;v&aacute;lasz az ig&eacute;nyl&eacute;sre&quot; hivatkoz&aacute;sra kattintva.
+  </dd>
 
-<dd><p>If a request appears on the site, then we have attempted to send it to
-the authority by email. Any delivery failure messages will automatically
-appear on the site. You can check the address we're using with the "View FOI
-email address" link which appears on the page for the authority. <a
-href="/help/contact">Contact us</a> if there is a better address we can
-use.</p>
-<p>Requests are sometimes not delivered because they are quietly removed by
-"spam filters" in the IT department of the authority. Authorities can make
-sure this doesn't happen by asking their IT departments to "whitelist" 
-any email from <strong>@whatdotheyknow.com</strong>.
-If you <a href="/help/contact">ask us</a> we will resend any request,
-and/or give technical details of delivery so an IT department can chase
-up what happened to the message.
-</p>
-<p>Finally, you can respond to any request from your web browser, without
-needing any email, using the "respond to request" link at the bottom of
-each request page.
-</dd>
+  <dt id="days">Hogyan sz&aacute;m&iacute;tj&aacute;k ki az ig&eacute;nyl&eacute;si oldalon szereplõ hat&aacute;ridõt?<a href="#days">#</a> </dt>
 
-<dt id="days">How do you calculate the deadline shown on request pages?<a href="#days">#</a> </dt>
+  <dd>
+  <p>Az inform&aacute;ci&oacute; szabads&aacute;g&aacute;r&oacute;l sz&oacute;l&oacute; t&ouml;rv&eacute;ny szerint:</p>
 
-<dd>
-<p>The Freedom of Information Act says:</p>
+  <blockquote><p>A k&ouml;zint&eacute;zm&eacute;nynek <strong>azonnal</strong>, de k&eacute;zhez v&eacute;teltõl sz&aacute;m&iacute;tva legfeljebb h&uacute;sz munkanapon bel&uuml;l v&aacute;laszolnia kell az  1(1) bekezd&eacute;s &eacute;rtelm&eacute;ben.</p></blockquote>
 
-<blockquote><p>A public authority must comply with section 1(1) <strong>promptly</strong> and
-in any event not later than the twentieth working day following the date of
-receipt.</p></blockquote>
+  <p>Az csup&aacute;n r&eacute;szletk&eacute;rd&eacute;s, hogy a h&eacute;tv&eacute;geket pontosan hogyan kell sz&aacute;molni, illetve mi t&ouml;rt&eacute;nik akkor, ha az adatig&eacute;nyl&eacute;s munkaidõn t&uacute;l fut be. A l&eacute;nyeg az, hogy a vonatkoz&oacute; jogszab&aacute;ly &eacute;rtelm&eacute;ben a k&ouml;zint&eacute;zm&eacute;nynek <strong>azonnal</strong> kell v&aacute;laszolnia.</p>
 
-<p>The nerdy detail of exactly how weekends are counted, and what happens if
-the request arrives out of office hours, is just that - detail. What matters
-here is that the law says authorities must respond <strong>promptly</strong>.</p>
+  <p>Amennyiben megfelelõ indoka van arra, hogy az ig&eacute;nyl&eacute;s feldolgoz&aacute;s&aacute;ra mi&eacute;rt van sz&uuml;ks&eacute;g hosszabb idõre, az ig&eacute;nylõ igen hasznosnak fogja tal&aacute;lni, ha r&ouml;vid e-mail &uuml;zenetben egy-k&eacute;t mondatban t&aacute;j&eacute;koztatja a helyzetrõl. </p>
 
-<p>If you've got a good reason why the request is going to take a while to
-process, requesters find it really helpful if you can send a quick email with a
-sentence or two saying what is happening. </p>
+  <p>A megkeres&eacute;sekre v&aacute;laszol&oacute; munkat&aacute;rsak sz&aacute;m&aacute;ra gyakran <strong>sok munk&aacute;t</strong> jelent az ig&eacute;nyl&eacute;sek megv&aacute;laszol&aacute;sa, &eacute;s ezt az &aacute;llampolg&aacute;rok sok esetben nem &eacute;rz&eacute;kelik. &Uacute;gy gondoljuk, hogy mindenki sz&aacute;m&aacute;ra seg&iacute;ts&eacute;get jelent, ha ez az &ouml;sszetett munka nyilv&aacute;noss&aacute;got kap.</p>
 
-<p>FOI officers often have to do a lot of <strong>hard work</strong> to answer
-requests, and this is hidden from the public. We think it would help everyone
-to have more of that complexity visible.</p>
+  </dd>
 
-</dd>
+  <dt id="days2">De m&eacute;gis hogyan t&ouml;rt&eacute;nik a hat&aacute;ridõ meghat&aacute;roz&aacute;sa?<a href="#days2">#</a> </dt>
 
-<dt id="days2">But really, how do you calculate the deadline?<a href="#days2">#</a> </dt>
+  <dd>
 
-<dd>
+  <p>Olvassa el az elõzõ k&eacute;rd&eacute;sre adott v&aacute;laszt. A jogszab&aacute;ly &eacute;rtelm&eacute;ben a k&ouml;z&eacute;rdekû adatig&eacute;nyl&eacute;sekre <strong>azonnal</strong> v&aacute;laszt kell adni. Ha ez nem siker&uuml;l, a legjobb, ha megmagyar&aacute;zz&aacute;k, hogy mi&eacute;rt kell t&ouml;bb idõ &eacute;s &iacute;gy egy&eacute;rtelmûv&eacute; v&aacute;lik, hogy a h&aacute;tt&eacute;rben kem&eacute;ny munka folyik.
+  </p>
 
-<p>Please read the answer to the previous question first. Legally, authorities
-must respond <strong>promptly</strong> to FOI requests. If they fail to do that,
-it is best if they show the hard work they are doing by explaining what is
-taking the extra time to do.
-</p>
+  <p>Mindazon&aacute;ltal a KiMitTud az adatig&eacute;nyl&eacute;sre val&oacute; v&aacute;laszad&aacute;sra vonatkoz&oacute;an a jogszab&aacute;ly &aacute;ltal meghat&aacute;rozott maxim&aacute;lis idõtartamot adja meg. Ennek kisz&aacute;m&iacute;t&aacute;sa a k&ouml;vetkezõ m&oacute;don t&ouml;rt&eacute;nik.</p>
 
-<p>That said, WhatDoTheyKnow does show the maximum legal deadline
-for response on each request. Here's how we calculate it.</p>
+  <ul>
 
-<ul>
+  <li>Amennyiben az ig&eacute;nyl&eacute;st munkanapon tov&aacute;bb&iacute;tjuk, akkor ez a nap sz&aacute;m&iacute;t a &quot;nulladik napnak&quot; - m&eacute;g akkor is, ha a tov&aacute;bb&iacute;t&aacute;sra k&eacute;sõ este ker&uuml;lt sor. A nap &eacute;jf&eacute;lkor z&aacute;rul le. Ezut&aacute;n a k&ouml;vetkezõ munkanap az &quot;elsõ nap&quot;, &eacute;s &iacute;gy tov&aacute;bb a <strong>20. munkanapig</strong>.</li>
 
-<li>If the day we deliver the request by email is a working day, we count that
-as "day zero", even if it was delivered late in the evening. Days end at
-midnight.  We then count the next working day as "day one", and so on up to
-<strong>20 working days</strong>.</li>
+  <li>Ha az ig&eacute;nyl&eacute;st tartalmaz&oacute; e-mailt nem munkanapon tov&aacute;bb&iacute;tottuk, akkor a k&ouml;vetkezõ munkanapot tekintj&uuml;k &quot;elsõ napnak&quot;. A tov&aacute;bb&iacute;t&aacute;s akkor is tov&aacute;bb&iacute;t&aacute;s, ha az h&eacute;tv&eacute;g&eacute;n t&ouml;rt&eacute;nt. Egyes k&ouml;zint&eacute;zm&eacute;nyek <a href="http://www.whatdotheyknow.com/request/policy_regarding_body_scans#incoming-1100">ezzel nem &eacute;rtenek egyet</a>, a mi &uuml;gyv&eacute;d&uuml;nk azonban vel&uuml;k nem &eacute;rt egyet. </li>
 
-<li>If the day the request email was delivered was a non-working day, we count
-the next working day as "day one". Delivery is delivery, even if it happened on
-the weekend. Some authorities <a href="http://www.whatdotheyknow.com/request/policy_regarding_body_scans#incoming-1100">disagree with this</a>, our lawyer disagrees with them. </li>
+  <li>Arra b&aacute;tor&iacute;tjuk az ig&eacute;nylõket, hogy jelezz&eacute;k, ha az adatig&eacute;nyl&eacute;st <strong>pontos&iacute;tj&aacute;k</strong>, hogy a v&aacute;laszad&aacute;sra rendelkez&eacute;sre &aacute;ll&oacute; idõ sz&aacute;m&iacute;t&aacute;sa &uacute;jra induljon. Sajnos ez nem mindig siker&uuml;l. Ha valamelyik ig&eacute;nyl&eacute;ssel kapcsolatosan probl&eacute;ma mer&uuml;l fel, t&aacute;j&eacute;koztasson benn&uuml;nket r&oacute;la, mi pedig megpr&oacute;b&aacute;lunk megold&aacute;st tal&aacute;lni.</li>
+  </ul>
 
-<li>Requesters are encouraged to mark when they have <strong>clarified</strong>
-their request so the clock resets, but sometimes they get this wrong. If you
-see a problem with a particular request, let us know and we'll fix it.</li>
-</ul>
+  <p>Az &iacute;gy kisz&aacute;m&iacute;tott d&aacute;tum az adatig&eacute;nyl&eacute;sen a k&ouml;vetkezõ sz&ouml;veggel jelenik meg &quot;A vonatkoz&oacute; rendelkez&eacute;s &eacute;rtelm&eacute;ben a Soproni Polg&aacute;rmesteri Hivatalnak a k&ouml;vetkezõ idõpontig kellett volna v&aacute;laszt adnia:...&quot;. Ez al&oacute;l egyetlen kiv&eacute;tel van. L&aacute;sd a k&ouml;vetkezõ k&eacute;rd&eacute;st, amely a <a href="#public_interest_test">k&ouml;z&eacute;rdek vizsg&aacute;lat&aacute;val</a> foglalkozik.
+  </p>
 
-<p>The date thus calculated is shown on requests with the text "By law,
-Liverpool City Council should normally have responded by...". There is only
-one case which is not normal, see the next question about
-<a href="#public_interest_test">public interest test time extensions</a>.
-</p>
+  <p>Az iskol&aacute;k szint&eacute;n k&uuml;l&ouml;nleges esetnek sz&aacute;m&iacute;tanak, amit a KiMitTud m&aacute;sk&eacute;ppen jelen&iacute;t meg.
+  </p>
 
-<p>Schools are also a special case, which WhatDoTheyKnow displays differently.
-</p>
+  <ul>
+  <li>2009 j&uacute;niusa &oacute;ta az <strong>iskol&aacute;k</strong> r&eacute;sz&eacute;re &quot;a nem iskolal&aacute;togat&aacute;si napnak sz&aacute;m&iacute;t&oacute; munkanapokat figyelmen k&iacute;v&uuml;l hagyva 20 munkanap vagy 60 munkanap k&ouml;z&uuml;l a r&ouml;videbb idõtartam &aacute;ll rendelkez&eacute;sre&quot; (<a href="http://www.opsi.gov.uk/si/si2009/draft/ukdsi_9780111477632_en_1">Az inform&aacute;ci&oacute; szabads&aacute;g&aacute;r&oacute;l sz&oacute;l&oacute; 2009. &eacute;vi szab&aacute;lyok (ig&eacute;nyl&eacute;sre val&oacute; v&aacute;laszad&aacute;sra rendelkez&eacute;sre &aacute;ll&oacute; idõ)</a>). A KiMitTud az iskol&aacute;knak k&uuml;ld&ouml;tt ig&eacute;nyl&eacute;seken jelzi, hogy a 20 napos hat&aacute;ridõ csak a szorgalmi idõre vonatkozik, &eacute;s a v&aacute;laszad&aacute;s csak 60 nap lej&aacute;rta ut&aacute;n minõs&uuml;l k&eacute;sedelmesnek.
+  </li>
+  </ul>
 
-<ul>
-<li>Since June 2009, <strong>schools</strong> have "20 working days
-disregarding any working day which is not a school day, or 60 working days,
-whichever is first" (<a href="http://www.opsi.gov.uk/si/si2009/draft/ukdsi_9780111477632_en_1">FOI (Time for Compliance with Request) Regulations 2009</a>). WhatDoTheyKnow indicates on requests to schools that the 20 day deadline is only
-during term time, and shows them as definitely overdue after 60 working days
-</li>
-</ul>
+  <p>Ha k&iacute;v&aacute;ncsi a r&eacute;szletekre, olvassa el az <a href="http://www.ico.gov.uk/upload/documents/library/freedom_of_information/detailed_specialist_guides/timeforcompliance.pdf">Adatv&eacute;delmi Hivatal r&eacute;szletes &uacute;tmutat&aacute;s&aacute;t</a>. Mindenesetre ne feledje, hogy a vonatkoz&oacute; jogszab&aacute;ly &eacute;rtelm&eacute;ben a k&ouml;zint&eacute;zm&eacute;nynek <strong>azonnal</strong> kell v&aacute;laszt adnia. Ez az, ami igaz&aacute;b&oacute;l sz&aacute;m&iacute;t.</p>
 
-<p>If you're getting really nerdy about all this, read the <a href="http://www.ico.gov.uk/upload/documents/library/freedom_of_information/detailed_specialist_guides/timeforcompliance.pdf">detailed ICO guidance</a>. 
-Meanwhile, remember that the law says authorities must respond
-<strong>promptly</strong>. That's really what matters.</p>
+  </dd>
 
-</dd>
+  <dt id="public_interest_test">Hogyan jelentkezik a hosszabb&iacute;t&aacute;s a k&ouml;z&eacute;rdek vizsg&aacute;lata eset&eacute;n?<a href="#public_interest_test">#</a> </dt>
 
-<dt id="public_interest_test">How do you reflect time extensions for public interest tests?<a href="#public_interest_test">#</a> </dt>
+  <dd>
 
-<dd>
+  <p>Az inform&aacute;ci&oacute; szabads&aacute;g&aacute;r&oacute;l sz&oacute;l&oacute; t&ouml;rv&eacute;ny lehetõv&eacute; teszi a k&ouml;zint&eacute;zm&eacute;nyek sz&aacute;m&aacute;ra, hogy a <strong>k&ouml;z&eacute;rdek vizsg&aacute;lata</strong> eset&eacute;n hat&aacute;rozatlan idõre meghosszabb&iacute;ts&aacute;k a v&aacute;laszad&aacute;sra rendelkez&eacute;sre &aacute;ll&oacute; idõtartamot. Az adatv&eacute;delmi biztos &uacute;tmutat&aacute;sa szerint ez azonban csak &quot;kiv&eacute;telesen &ouml;sszetett&quot; &uuml;gyek eset&eacute;n alkalmazhat&oacute; (<a href="http://www.ico.gov.uk/upload/documents/library/freedom_of_information/detailed_specialist_guides/foi_good_practice_guidance_4.pdf">K&ouml;z&eacute;rdekû inform&aacute;ci&oacute;k, 4. sz. j&oacute; gyakorlat &uacute;tmutat&oacute;</a>). A KiMitTud nem foglalkozik k&uuml;l&ouml;n ezzel az esettel, ez&eacute;rt haszn&aacute;ljuk az &quot;ekkorra kellett volna v&aacute;laszt adnia:&quot; kifejez&eacute;st, ha a 20 munkanap lej&aacute;rt.
+  </p>
 
-<p>The Freedom of Information Act lets authorities claim an indefinite time
-extension when applying a <strong>public interest test</strong>.  Information
-Commissioner guidance says that it should only be used in "exceptionally
-complex" cases
-(<a href="http://www.ico.gov.uk/upload/documents/library/freedom_of_information/detailed_specialist_guides/foi_good_practice_guidance_4.pdf">FOI Good Practice Guidance No. 4</a>). 
-WhatDoTheyKnow doesn't specifically handle this case, which is why we use the
-phrase "should normally have responded by" when the 20 working day time is
-exceeded. 
-</p>
+  <p>Ugyanebben az &uacute;tmutat&oacute;ban azt is olvashatjuk, hogy a k&ouml;z&eacute;rdekû adatig&eacute;nyl&eacute;sre vonatkoz&oacute;an m&eacute;g kiv&eacute;telesen &ouml;sszetett &uuml;gyek eset&eacute;n sem vehet a v&aacute;laszad&aacute;s <strong>40 munkanapn&aacute;l</strong> hosszabb idõt ig&eacute;nybe. A KiMitTud azon ig&eacute;nyl&eacute;sek eset&eacute;n, amelyekre ennyi ideig nem &eacute;rkezett v&aacute;lasz, a k&eacute;sedelemre j&oacute;val hat&aacute;rozottabb szavakkal h&iacute;vja fel a figyelmet.
+  </p>
 
-<p>The same guidance says that, even in exceptionally complex cases, no
-Freedom of Information request should take more than <strong>40 working days</strong> 
-to answer.  WhatDoTheyKnow displays requests which are overdue by that much
-with stronger wording to indicate they are definitely late.
-</p>
+  <p>Az inform&aacute;ci&oacute; szabads&aacute;g&aacute;r&oacute;l sz&oacute;l&oacute; t&ouml;rv&eacute;ny (Sk&oacute;cia) nem teszi lehetõv&eacute; a k&ouml;z&eacute;rdek vizsg&aacute;lat&aacute;ra hivatkozva a hosszabb&iacute;t&aacute;st. A KiMitTud azt szeretn&eacute; el&eacute;rni, hogy az angol jogszab&aacute;lyb&oacute;l t&aacute;vol&iacute;ts&aacute;k el a hosszabb&iacute;t&aacute;s lehetõs&eacute;g&eacute;t, vagy azt, hogy a hosszabb&iacute;t&aacute;ssal egy&uuml;tt is &ouml;sszesen 40 munkanap &aacute;lljon rendelkez&eacute;sre (a Felsõh&aacute;z az angliai jogszab&aacute;ly vit&aacute;j&aacute;nak kezdeti szakasz&aacute;ban <a   href="http://www.publicwhip.org.uk/division.php?date=2000-10-17&amp;number=1&amp;house=lords">megszavazta</a>, hogy az idõkorl&aacute;toz&aacute;sra vonatkoz&oacute; rendelkez&eacute;st elt&aacute;vol&iacute;ts&aacute;k).
+  </p>
+  </dd>
 
-<p>The Freedom of Information (Scotland) Act does not allow such a public
-interest extension. WhatDoTheyKnow would like to see the law changed to either
-remove the extension from the UK Act, or to reintroduce an absolute time limit
-of 40 working days even with the extension (the House of Lords <a
-href="http://www.publicwhip.org.uk/division.php?date=2000-10-17&amp;number=1&amp;house=lords">voted
-to remove</a> provision for such a time limit during the initial passage
-of the UK Act through Parliament). 
-</p>
-</dd>
+  <dt id="large_file">Hogyan t&ouml;lthetek fel nagyobb f&aacute;jlokat, amelyeket e-mailben nem tudok elk&uuml;ldeni?<a href="#large_file">#</a> </dt>
 
-<dt id="large_file">How can I send a large file, which won't go by email?<a href="#large_file">#</a> </dt>
+  <dd>E-mail k&uuml;ld&eacute;se helyett k&ouml;zvetlen&uuml;l a webb&ouml;ng&eacute;szõbõl is elk&uuml;ldheti v&aacute;lasz&aacute;t; itt f&aacute;jl felt&ouml;lt&eacute;s&eacute;re is lehetõs&eacute;ge van. Ehhez kattintson az ig&eacute;nyl&eacute;st tartalmaz&oacute; oldal alj&aacute;n tal&aacute;lhat&oacute; &quot;v&aacute;lasz az ig&eacute;nyl&eacute;sre&quot; hivatkoz&aacute;sra. <a href="/help/contact">L&eacute;pjen vel&uuml;nk kapcsolatba</a>, ha a f&aacute;jl t&uacute;l nagy ahhoz, hogy felt&ouml;ltse (meghaladja a 50 Mb-t).
+  </dd>
 
-<dd>Instead of email, you can respond to a request directly from your web
-browser, including uploading a file. To do this, choose "respond to request" at
-the bottom of the request's page. <a href="/help/contact">Contact us</a> if it
-is too big for even that (more than, say, 50Mb).
-</dd>
+  <dt id="names">Mi&eacute;rt teszik k&ouml;zz&eacute; a k&ouml;ztisztviselõ nev&eacute;t &eacute;s az e-mailek sz&ouml;veg&eacute;t? <a href="#names">#</a> </dt>
 
-<dt id="names">Why do you publish the names of civil servants and the text of emails? <a href="#names">#</a> </dt>
+  <dd>&Uacute;gy gondoljuk, hogy a k&ouml;ztisztviselõk munkak&ouml;ri tev&eacute;kenys&eacute;ge k&ouml;z&eacute;rdekû inform&aacute;ci&oacute;nak sz&aacute;m&iacute;t. Tartalmat csak kiv&eacute;teles k&ouml;r&uuml;lm&eacute;nyek eset&eacute;n t&aacute;vol&iacute;tunk el. Ezzel kapcsolatosan l&aacute;sd az <a href="/help/privacy#takedown">elt&aacute;vol&iacute;t&aacute;sra vonatkoz&oacute; politik&aacute;nkat</a>.
+  </dd>
 
-<dd>We consider what officers or servants do in the course of their employment
-to be public information. We will only remove content in exceptional
-circumstances, see our <a href="/help/privacy#takedown">take down policy</a>.
-</dd>
+  <dt id="mobiles">Az e-mail c&iacute;meket &eacute;s mobiltelefonsz&aacute;mokat is k&ouml;zz&eacute;teszik? <a href="#mobiles">#</a> </dt>
 
-<dt id="mobiles">Do you publish email addresses or mobile phone numbers? <a href="#mobiles">#</a> </dt>
+  <dd><p>A lev&eacute;lszem&eacute;t kik&uuml;sz&ouml;b&ouml;l&eacute;se &eacute;rdek&eacute;ben a legt&ouml;bb e-mail c&iacute;met &eacute;s bizonyos mobiltelefonsz&aacute;mokat automatikusan elt&aacute;vol&iacute;tunk. Ha valami elker&uuml;lte volna figyelm&uuml;nket, <a href="/help/contact">l&eacute;pjen vel&uuml;nk kapcsolatba</a>. Technikai megfontol&aacute;sok miatt a csatolt dokumentumokb&oacute;l (p&eacute;ld&aacute;ul egyes PDF-f&aacute;jlokb&oacute;l) nem minden esetben t&aacute;vol&iacute;tjuk ezeket el.</p>
+  <p>Ha szeretn&eacute; tudni, hogy milyen c&iacute;met t&aacute;vol&iacute;tottunk el, k&eacute;rj&uuml;k, <a     href="/help/contact">l&eacute;pjen vel&uuml;nk kapcsolatba</a>. Elõfordulhat, hogy az e-mail c&iacute;m fontos r&eacute;sze a v&aacute;lasznak; ilyen esetben azt magyar&aacute;z&oacute; jegyzetben, elhom&aacute;lyos&iacute;tva t&uuml;ntetj&uuml;k fel.
+  </dd>
 
-<dd><p>To prevent spam, we automatically remove most emails and some mobile numbers from
-responses to requests.  Please <a href="/help/contact">contact us</a> if we've
-missed one. 
-For technical reasons we don't always remove them from attachments, such as certain PDFs.</p>
-<p>If you need to know what an address was that we've removed, please <a
-  href="/help/contact">get in touch with us</a>. Occasionally, an email address
-forms an important part of a response and we will post it up in an obscured
-form in an annotation.
-</dd>
+  <dt id="copyright"><a name="commercial"></a>Mi a dokumentumok szerzõi jog&aacute;ra vonatkoz&oacute; politik&aacute;juk?<a href="#copyright">#</a> </dt>
 
-<dt id="copyright"><a name="commercial"></a>What is your policy on copyright of documents?<a href="#copyright">#</a> </dt>
+  <dd>Az inform&aacute;ci&oacute; szabads&aacute;g&aacute;r&oacute;l sz&oacute;l&oacute; t&ouml;rv&eacute;ny nem tesz k&uuml;l&ouml;nbs&eacute;get az ig&eacute;nylõk k&ouml;zt, azaz a vil&aacute;g b&aacute;rmely pontj&aacute;n b&aacute;rkinek joga van ugyanarra a dokumentumra, &eacute;s azt meg is kell, hogy kapja.
 
-<dd>Our Freedom of Information law is "applicant blind", so anyone in the
-world can request the same document and get a copy of it. 
+  Amennyiben &uacute;gy v&eacute;li, hogy az &Ouml;n szerzõi jogait s&eacute;rti, ha egy adott dokumentumot az interneten k&ouml;zz&eacute;tesz&uuml;nk, <a href="/help/contact">l&eacute;pjen vel&uuml;nk kapcsolatba</a>, hogy a sz&oacute;ban forg&oacute; dokumentumot elt&aacute;vol&iacute;tsuk. A t&ouml;bbsz&ouml;r&ouml;s ig&eacute;nyl&eacute;sek kik&uuml;sz&ouml;b&ouml;l&eacute;se, &eacute;s ez&aacute;ltal az ad&oacute;fizetõk p&eacute;nz&eacute;nek megtakar&iacute;t&aacute;sa &eacute;s a j&oacute; PR &eacute;rdek&eacute;ben &eacute;rdek&eacute;ben azonban javasoljuk, hogy ettõl tekintsen el.
+  </dd>
 
-If you think our making a document available on the internet infringes your
-copyright, you may <a href="/help/contact">contact us</a> and ask us
-to take it down.  However, to save tax payers' money by preventing duplicate
-requests, and for good public relations, we'd advise you not to do that.
-</dd>
-
-</dl>
+  </dl>
 
 
-</dl>
+  </dl>
 
-<p><strong>If you haven't already</strong>, read <a href="/help/about">the introduction</a> --&gt;
-<br><strong>Otherwise</strong>, the <a href="/help/credits">credits</a> or the <a href="/help/api">programmers API</a> --&gt;
+  <p><strong>Amennyiben m&eacute;g nem tette</strong>, olvassa el <a href="/help/about">a bevezetõt</a> --&gt; <br><strong>Egy&eacute;b esetben</strong> v&aacute;lassza a <a href="/help/credits">k&ouml;sz&ouml;netnyilv&aacute;n&iacute;t&aacute;s</a> vagy az <a href="/help/api">alkalmaz&aacute;sprogramoz&aacute;si fel&uuml;let</a> c&iacute;mû r&eacute;szt--&gt;
 
-<div id="hash_link_padding"></div>
-
-
+  <div id="hash_link_padding"></div>
 </div>
+
+
