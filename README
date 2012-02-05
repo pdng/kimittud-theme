@@ -1,7 +1,7 @@
 Alavetelitheme
 ==============
 
-This is a "hello world" type theme package for Alaveteli.
+This is a hungarian localisated theme package for Alaveteli.
 
 The intention is to support simple overlaying of templates and
 resources without the need to touch the core Alaveteli software.
@@ -16,7 +16,7 @@ Typical usage should be limited to:
 
 To install::
  
-  ./script/plugin install git://github.com/sebbacon/alavetelitheme.git
+  ./script/plugin install git://github.com/Claymanus/kimittud-theme.git
 
 Look in the lib/ folder of the plugin to see how the overrides happen.
 
