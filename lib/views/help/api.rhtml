@@ -1,83 +1,67 @@
-<% @title = "Application Programming Interface - API" %>
+<% @title = "Az API" %>
 
 <%= render :partial => 'sidebar' %>
 
 <div id="left_column_flip">
-<h1><%=@title %></h1>
+  <h1><%=@title %></h1>
+  <dl>
+    <dt>Bevezet&eacute;s</dt>
+    <dd>
+      <p>Ezen az oldalon elolvashatja, hogy programoz&oacute;k hogyan hozhatnak l&eacute;tre tov&aacute;bbi weboldalakat &eacute;s azt, hogy a szoftver hogyan kommunik&aacute;l a KiMitTud rendszerrel az API-n kereszt&uuml;l.
+      </p>
 
-<h2> Introduction </h2>
+      <p>A KiMitTud nem rendelkezik m&eacute;g teljes API-val, de az ig&eacute;nyeknek megfelelõen folyamatosan vesz&uuml;nk fel olyan dolgokat, amelyek haszn&aacute;lata hasonl&iacute;t az API-hoz.
+      </p>
+    </dd>
 
-<p>This page explains how programmers can make other websites and software
-interact with WhatDoTheyKnow via an "API".
-</p>
+    <dt>&Uacute;j ig&eacute;nyl&eacute;sekre mutat&oacute; hivatkoz&aacute;s elhelyez&eacute;se</dt>
+    <dd>
+      <p>Annak &eacute;rdek&eacute;ben, hogy a felhaszn&aacute;l&oacute;k haszn&aacute;lj&aacute;k a k&ouml;zint&eacute;zm&eacute;nyekre mutat&oacute; hivatkoz&aacute;sokat, az URL-ek form&aacute;ja a k&ouml;vetkezõ legyen: <%= link_to new_request_to_body_url(:url_name => "liverpool_city_council") , new_request_to_body_url(:url_name => "liverpool_city_council") %>. Az al&aacute;bbi param&eacute;tereket adhatja hozz&aacute; az URL-ekhez ak&aacute;r mag&aacute;ban az URL-ben, ak&aacute;r ûrlapr&oacute;l.
 
-<p>WhatDoTheyKnow does not have a full API yet, but we are gradually adding
-lots of things that are similar in use to an API as they are requested.
-</p>
+      <ul>
+          <li> <strong>title</strong> - &uacute;j adatig&eacute;nyl&eacute;s alap&eacute;rtelmezett &ouml;sszefoglal&aacute;sa.</li>
+          <li> <strong>default_letter</strong> - lev&eacute;l t&ouml;rzs&eacute;nek alap&eacute;rtelmezett sz&ouml;vege. Az &uuml;dv&ouml;zl&eacute;s (Tisztelt...) &eacute;s az elb&uacute;cs&uacute;z&aacute;s (&Uuml;dv&ouml;zlettel...) ezt &ouml;lelik k&ouml;rbe. </li>
+          <li> <strong>body</strong> - a default_letter alternat&iacute;v&aacute;jak&eacute;nt ez meghat&aacute;rozza az adatig&eacute;nyl&eacute;s teljes sz&ouml;veg&eacute;nek alap&eacute;rt&eacute;k&eacute;t, &eacute;s &iacute;gy az &uuml;dv&ouml;zl&eacute;s &eacute;s elb&uacute;cs&uacute;z&aacute;s szem&eacute;lyre szabhat&oacute; lehet. </li>
+          <li> <strong>tags</strong> - c&iacute;mk&eacute;k sz&oacute;k&ouml;zzel elv&aacute;lasztott list&aacute;ja, amely alapj&aacute;n az adatig&eacute;nyl&eacute;sek b&aacute;rmikor kikereshetõk &eacute;s hivatkozhat&oacute;k, pl. <em>openlylocal spending_id:12345</em>. A : g&eacute;pi c&iacute;mk&eacute;t jel&ouml;l. A g&eacute;pi c&iacute;mk&eacute;k &eacute;rt&eacute;ke tartalmazhat kettõspontot, amely URL-ek eset&eacute;ben hasznos lehet.
+      </ul>
+    </dd>
 
-<hr>
+    <dt>RSS- (Atom) h&iacute;rfolyam</h2>
+    <dd>
+      <p>A legt&ouml;bb olyan oldalon, amelyen k&ouml;z&eacute;rdekû adatig&eacute;nyl&eacute;sek list&aacute;ja szerepel, Atom h&iacute;rfolyam is tal&aacute;lhat&oacute;, amelynek seg&iacute;ts&eacute;g&eacute;vel friss&iacute;t&eacute;sekhez &eacute;s XML form&aacute;tum&uacute; hivatkoz&aacute;sokhoz juthat hozz&aacute;. Az Atom h&iacute;rfolyam URL-j&eacute;t az al&aacute;bbi m&oacute;dokon keresheti meg: 
+      <ul>
+          <li>Keresse az <img src="/images/feed-16.png" alt=""> RSS-h&iacute;rfolyam hivatkoz&aacute;st.</li>
+          <li>Vizsg&aacute;lja meg a <tt>&lt;link rel=&quot;alternate&quot; type=&quot;application/atom+xml&quot;&gt;</tt> c&iacute;mk&eacute;t a HTML fejr&eacute;sz&eacute;ben. </li>
+          <li>Adja a <tt>/feed</tt> elemet egy m&aacute;sik URL elej&eacute;hez.
+      </ul>
 
-<h2> 1. Linking to new requests </h2>
+      <p>M&eacute;g az &ouml;sszetettebb keres&eacute;si lek&eacute;rdez&eacute;sekhez is tartozik Atom h&iacute;rfolyam. Ezek sok mindenre haszn&aacute;lhat&oacute;k: kereshet p&eacute;ld&aacute;ul k&ouml;zint&eacute;zm&eacute;ny, f&aacute;jlt&iacute;pus, d&aacute;tumtartom&aacute;ny vagy &aacute;llapot szerint. Tov&aacute;bbi r&eacute;szletek&eacute;rt l&aacute;sd az <a href="/search">&ouml;sszetett keres&eacute;sre vonatkoz&oacute; tippek</a> c&iacute;mû r&eacute;szt.
+    </dd>
 
-<p>To encourage your users to make links to a particular public authority, use URLs of the form
-<%= link_to new_request_to_body_url(:url_name => "liverpool_city_council") , new_request_to_body_url(:url_name => "liverpool_city_council") %>. 
-These are the parameters you can add to those URLs, either in the URL or from a form.
+    <dt>JSON form&aacute;tum&uacute; struktur&aacute;lt adatok</dt>
+    <dd>
+      <p>J&oacute; n&eacute;h&aacute;ny oldalnak van JSON verzi&oacute;ja is, amelynek seg&iacute;ts&eacute;g&eacute;vel az objektumokr&oacute;l struktur&aacute;lt form&aacute;ban tud let&ouml;lteni inform&aacute;ci&oacute;t. Ezeket a k&ouml;vetkezõ m&oacute;don tudja megtal&aacute;lni:
+      <ul>
+          <li>Adja a <tt>.json</tt> elemet az URL v&eacute;g&eacute;hez. </li>
+          <li>Keresse meg a <tt>&lt;link rel=&quot;alternate&quot; type=&quot;application/json&quot;&gt;</tt> c&iacute;mk&eacute;t a HTML fejr&eacute;sz&eacute;ben. </li>
+      </ul>
+      </p>
 
-<ul>
-    <li> <strong>title</strong> - default summary of the new request.</li>
-    <li> <strong>default_letter</strong> - default text of the body of the letter. The salutation (Dear...) and signoff (Yours...) are wrapped round this. </li>
-    <li> <strong>body</strong> - as an alternative to default_letter, this sets the default entire text of the request, so you can customise the salutation and signoff. </li>
-    <li> <strong>tags</strong> - space separated list of tags, so you can find and link up any requests made later, e.g. <em>openlylocal spending_id:12345</em>. The : indicates it is a machine tag. The values of machine tags may also include colons, useful for URIs.
-</ul>
+      <p>Az ig&eacute;nyl&eacute;sek, a felhaszn&aacute;l&oacute;k &eacute;s a k&ouml;zint&eacute;zm&eacute;nyek mind rendelkeznek JSON verzi&oacute;val, amely tartalmazza a r&aacute;juk vonatkoz&oacute; legfontosabb adatokat. Minden Atom h&iacute;rfolyamnak van JSON form&aacute;tum&uacute; megfelelõje, amely a h&iacute;rfolyamban tal&aacute;lhat&oacute; esem&eacute;nyek list&aacute;j&aacute;ra vonatkoz&oacute;an tartalmaz adatokat.
+      </p>
+    </dd>
+    
+    <dt>Az &ouml;sszes k&ouml;zint&eacute;zm&eacute;nyt tartalmaz&oacute; t&aacute;bla</dt>
+    <dd>
+      <p>
+      A KiMitTud weboldalon kereszt&uuml;l el&eacute;rhetõ &ouml;sszes k&ouml;zint&eacute;zm&eacute;nyt tartalmaz&oacute; lista: <%= link_to "all-authorities.csv", all_public_bodies_csv_url() %>
+      </p>
 
-<hr>
+    </dd>
+  </dl>
 
-<h2> 2. RSS (actually, Atom) feeds </h2>
+  <p>Ha olyan API-funkci&oacute;ra van sz&uuml;ks&eacute;ge, amelyet nem tal&aacute;l, <a href="/help/contact">l&eacute;pjen vel&uuml;nk kapcsolatba</a>. Folyamatos fejlõd&eacute;srõl van sz&oacute;, &eacute;s ig&eacute;ny eset&eacute;n &uacute;jabb &eacute;s &uacute;jabb funkci&oacute;k jelenhetnek meg a rendszerben.</p>
 
-<p>There are Atom feeds on most pages which list FOI requests, which you can
-use to get updates and links in XML format. Find the URL of the Atom feed in
-one of these ways: 
-<ul>
-    <li>Look for the <img src="/images/feed-16.png" alt=""> RSS feed links.</li>
-    <li>Examine the <tt>&lt;link rel="alternate" type="application/atom+xml"&gt;</tt> tag in the head of the HTML. </li>
-    <li>Add <tt>/feed</tt> to the start of another URL.
-</ul>
-
-<p>In particular, even complicated search queries have Atom feeds.
-You can do all sorts of things with them, such as query by authority, by file
-type, by date range, or by status. See the <a href="/search">advanced search
-tips</a> for details.
-
-<hr>
-
-<h2> 3. JSON structured data </h2>
-
-<p>Quite a few pages have JSON versions, which let you download information about
-objects in a structured form. Find them by:
-<ul>
-    <li>Adding <tt>.json</tt> to the end of the URL. </li>
-    <li>Look for the <tt>&lt;link rel="alternate" type="application/json"&gt;</tt> tag in the head of the HTML. </li>
-</ul>
-</p>
-
-<p>Requests, users and authorities all have JSON versions containing basic
-information about them. Every Atom feed has a JSON equivalent, containing
-information about the list of events in the feed.
-</p>
-
-<hr>
-<h2> 4. Spreadsheet of all authorities </h2>
-
-<p>
-A spreadsheet file listing every body in WhatDoTheyKnow is available:
-<%= link_to "all-authorities.csv", all_public_bodies_csv_url() %>
-</p>
-
-<hr>
-
-<p>Please <a href="/help/contact">contact us</a> if you need an API feature that isn't there yet. It's
-very much a work in progress, and we do add things when people ask us to.</p>
-
-<div id="hash_link_padding"></div>
-
+  <div id="hash_link_padding"></div>
 </div>
+
