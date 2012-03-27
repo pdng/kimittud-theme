@@ -5,62 +5,62 @@
 <div id="left_column_flip">
   <h1><%=@title %></h1>
   <dl>
-    <dt>Bevezet&eacute;s</dt>
+    <dt>Bevezetés</dt>
     <dd>
-      <p>Ezen az oldalon elolvashatja, hogy programoz&oacute;k hogyan hozhatnak l&eacute;tre tov&aacute;bbi weboldalakat &eacute;s azt, hogy a szoftver hogyan kommunik&aacute;l a KiMitTud rendszerrel az API-n kereszt&uuml;l.
+      <p>Ezen az oldalon elolvashatja, hogy programozók hogyan hozhatnak létre további weboldalakat és azt, hogy a szoftver hogyan kommunikál a KiMitTud rendszerrel az API-n keresztül.
       </p>
 
-      <p>A KiMitTud nem rendelkezik m&eacute;g teljes API-val, de az ig&eacute;nyeknek megfelel�en folyamatosan vesz&uuml;nk fel olyan dolgokat, amelyek haszn&aacute;lata hasonl&iacute;t az API-hoz.
+      <p>A KiMitTud nem rendelkezik még teljes API-val, de az igényeknek megfelelõen folyamatosan veszünk fel olyan dolgokat, amelyek használata hasonlít az API-hoz.
       </p>
     </dd>
 
-    <dt>&Uacute;j ig&eacute;nyl&eacute;sekre mutat&oacute; hivatkoz&aacute;s elhelyez&eacute;se</dt>
+    <dt>új igénylésekre mutató hivatkozás elhelyezése</dt>
     <dd>
-      <p>Annak &eacute;rdek&eacute;ben, hogy a felhaszn&aacute;l&oacute;k haszn&aacute;lj&aacute;k a k&ouml;zint&eacute;zm&eacute;nyekre mutat&oacute; hivatkoz&aacute;sokat, az URL-ek form&aacute;ja a k&ouml;vetkez� legyen: <%= link_to new_request_to_body_url(:url_name => "liverpool_city_council") , new_request_to_body_url(:url_name => "liverpool_city_council") %>. Az al&aacute;bbi param&eacute;tereket adhatja hozz&aacute; az URL-ekhez ak&aacute;r mag&aacute;ban az URL-ben, ak&aacute;r �rlapr&oacute;l.
+      <p>Annak érdekében, hogy a felhasználók használják a közintézményekre mutató hivatkozásokat, az URL-ek formája a következõ legyen: <%= link_to new_request_to_body_url(:url_name => "liverpool_city_council") , new_request_to_body_url(:url_name => "liverpool_city_council") %>. Az alábbi paramétereket adhatja hozzá az URL-ekhez akár magában az URL-ben, akár ûrlapról.
 
       <ul>
-          <li> <strong>title</strong> - &uacute;j adatig&eacute;nyl&eacute;s alap&eacute;rtelmezett &ouml;sszefoglal&aacute;sa.</li>
-          <li> <strong>default_letter</strong> - lev&eacute;l t&ouml;rzs&eacute;nek alap&eacute;rtelmezett sz&ouml;vege. Az &uuml;dv&ouml;zl&eacute;s (Tisztelt...) &eacute;s az elb&uacute;cs&uacute;z&aacute;s (&Uuml;dv&ouml;zlettel...) ezt &ouml;lelik k&ouml;rbe. </li>
-          <li> <strong>body</strong> - a default_letter alternat&iacute;v&aacute;jak&eacute;nt ez meghat&aacute;rozza az adatig&eacute;nyl&eacute;s teljes sz&ouml;veg&eacute;nek alap&eacute;rt&eacute;k&eacute;t, &eacute;s &iacute;gy az &uuml;dv&ouml;zl&eacute;s &eacute;s elb&uacute;cs&uacute;z&aacute;s szem&eacute;lyre szabhat&oacute; lehet. </li>
-          <li> <strong>tags</strong> - c&iacute;mk&eacute;k sz&oacute;k&ouml;zzel elv&aacute;lasztott list&aacute;ja, amely alapj&aacute;n az adatig&eacute;nyl&eacute;sek b&aacute;rmikor kikereshet�k &eacute;s hivatkozhat&oacute;k, pl. <em>openlylocal spending_id:12345</em>. A : g&eacute;pi c&iacute;mk&eacute;t jel&ouml;l. A g&eacute;pi c&iacute;mk&eacute;k &eacute;rt&eacute;ke tartalmazhat kett�spontot, amely URL-ek eset&eacute;ben hasznos lehet.
+          <li> <strong>title</strong> - új adatigénylés alapértelmezett összefoglalása.</li>
+          <li> <strong>default_letter</strong> - levél törzsének alapértelmezett szövege. Az üdvözlés (Tisztelt...) és az elbúcsúzás (üdvözlettel...) ezt ölelik körbe. </li>
+          <li> <strong>body</strong> - a default_letter alternatívájaként ez meghatározza az adatigénylés teljes szövegének alapértékét, és így az üdvözlés és elbúcsúzás személyre szabható lehet. </li>
+          <li> <strong>tags</strong> - címkék szóközzel elválasztott listája, amely alapján az adatigénylések bármikor kikereshetõk és hivatkozhatók, pl. <em>openlylocal spending_id:12345</em>. A : gépi címkét jelöl. A gépi címkék értéke tartalmazhat kettõspontot, amely URL-ek esetében hasznos lehet.
       </ul>
     </dd>
 
-    <dt>RSS- (Atom) h&iacute;rfolyam</h2>
+    <dt>RSS- (Atom) hírfolyam</h2>
     <dd>
-      <p>A legt&ouml;bb olyan oldalon, amelyen k&ouml;z&eacute;rdek� adatig&eacute;nyl&eacute;sek list&aacute;ja szerepel, Atom h&iacute;rfolyam is tal&aacute;lhat&oacute;, amelynek seg&iacute;ts&eacute;g&eacute;vel friss&iacute;t&eacute;sekhez &eacute;s XML form&aacute;tum&uacute; hivatkoz&aacute;sokhoz juthat hozz&aacute;. Az Atom h&iacute;rfolyam URL-j&eacute;t az al&aacute;bbi m&oacute;dokon keresheti meg: 
+      <p>A legtöbb olyan oldalon, amelyen közérdekû adatigénylések listája szerepel, Atom hírfolyam is található, amelynek segítségével frissítésekhez és XML formátumú hivatkozásokhoz juthat hozzá. Az Atom hírfolyam URL-jét az alábbi módokon keresheti meg: 
       <ul>
-          <li>Keresse az <img src="/images/feed-16.png" alt=""> RSS-h&iacute;rfolyam hivatkoz&aacute;st.</li>
-          <li>Vizsg&aacute;lja meg a <tt>&lt;link rel=&quot;alternate&quot; type=&quot;application/atom+xml&quot;&gt;</tt> c&iacute;mk&eacute;t a HTML fejr&eacute;sz&eacute;ben. </li>
-          <li>Adja a <tt>/feed</tt> elemet egy m&aacute;sik URL elej&eacute;hez.
+          <li>Keresse az <img src="/images/feed-16.png" alt=""> RSS-hírfolyam hivatkozást.</li>
+          <li>Vizsgálja meg a <tt>&lt;link rel=&quot;alternate&quot; type=&quot;application/atom+xml&quot;&gt;</tt> címkét a HTML fejrészében. </li>
+          <li>Adja a <tt>/feed</tt> elemet egy másik URL elejéhez.
       </ul>
 
-      <p>M&eacute;g az &ouml;sszetettebb keres&eacute;si lek&eacute;rdez&eacute;sekhez is tartozik Atom h&iacute;rfolyam. Ezek sok mindenre haszn&aacute;lhat&oacute;k: kereshet p&eacute;ld&aacute;ul k&ouml;zint&eacute;zm&eacute;ny, f&aacute;jlt&iacute;pus, d&aacute;tumtartom&aacute;ny vagy &aacute;llapot szerint. Tov&aacute;bbi r&eacute;szletek&eacute;rt l&aacute;sd az <a href="/search">&ouml;sszetett keres&eacute;sre vonatkoz&oacute; tippek</a> c&iacute;m� r&eacute;szt.
+      <p>Még az összetettebb keresési lekérdezésekhez is tartozik Atom hírfolyam. Ezek sok mindenre használhatók: kereshet például közintézmény, fájltípus, dátumtartomány vagy állapot szerint. További részletekért lásd az <a href="/search">összetett keresésre vonatkozó tippek</a> címû részt.
     </dd>
 
-    <dt>JSON form&aacute;tum&uacute; struktur&aacute;lt adatok</dt>
+    <dt>JSON formátumú strukturált adatok</dt>
     <dd>
-      <p>J&oacute; n&eacute;h&aacute;ny oldalnak van JSON verzi&oacute;ja is, amelynek seg&iacute;ts&eacute;g&eacute;vel az objektumokr&oacute;l struktur&aacute;lt form&aacute;ban tud let&ouml;lteni inform&aacute;ci&oacute;t. Ezeket a k&ouml;vetkez� m&oacute;don tudja megtal&aacute;lni:
+      <p>Jó néhány oldalnak van JSON verziója is, amelynek segítségével az objektumokról strukturált formában tud letölteni információt. Ezeket a következõ módon tudja megtalálni:
       <ul>
-          <li>Adja a <tt>.json</tt> elemet az URL v&eacute;g&eacute;hez. </li>
-          <li>Keresse meg a <tt>&lt;link rel=&quot;alternate&quot; type=&quot;application/json&quot;&gt;</tt> c&iacute;mk&eacute;t a HTML fejr&eacute;sz&eacute;ben. </li>
+          <li>Adja a <tt>.json</tt> elemet az URL végéhez. </li>
+          <li>Keresse meg a <tt>&lt;link rel=&quot;alternate&quot; type=&quot;application/json&quot;&gt;</tt> címkét a HTML fejrészében. </li>
       </ul>
       </p>
 
-      <p>Az ig&eacute;nyl&eacute;sek, a felhaszn&aacute;l&oacute;k &eacute;s a k&ouml;zint&eacute;zm&eacute;nyek mind rendelkeznek JSON verzi&oacute;val, amely tartalmazza a r&aacute;juk vonatkoz&oacute; legfontosabb adatokat. Minden Atom h&iacute;rfolyamnak van JSON form&aacute;tum&uacute; megfelel�je, amely a h&iacute;rfolyamban tal&aacute;lhat&oacute; esem&eacute;nyek list&aacute;j&aacute;ra vonatkoz&oacute;an tartalmaz adatokat.
+      <p>Az igénylések, a felhasználók és a közintézmények mind rendelkeznek JSON verzióval, amely tartalmazza a rájuk vonatkozó legfontosabb adatokat. Minden Atom hírfolyamnak van JSON formátumú megfelelõje, amely a hírfolyamban található események listájára vonatkozóan tartalmaz adatokat.
       </p>
     </dd>
     
-    <dt>Az &ouml;sszes k&ouml;zint&eacute;zm&eacute;nyt tartalmaz&oacute; t&aacute;bla</dt>
+    <dt>Az összes közintézményt tartalmazó tábla</dt>
     <dd>
       <p>
-      A KiMitTud weboldalon kereszt&uuml;l el&eacute;rhet� &ouml;sszes k&ouml;zint&eacute;zm&eacute;nyt tartalmaz&oacute; lista: <%= link_to "all-authorities.csv", all_public_bodies_csv_url() %>
+      A KiMitTud weboldalon keresztül elérhetõ összes közintézményt tartalmazó lista: <%= link_to "all-authorities.csv", all_public_bodies_csv_url() %>
       </p>
 
     </dd>
   </dl>
 
-  <p>Ha olyan API-funkci&oacute;ra van sz&uuml;ks&eacute;ge, amelyet nem tal&aacute;l, <a href="/help/contact">l&eacute;pjen vel&uuml;nk kapcsolatba</a>. Folyamatos fejl�d&eacute;sr�l van sz&oacute;, &eacute;s ig&eacute;ny eset&eacute;n &uacute;jabb &eacute;s &uacute;jabb funkci&oacute;k jelenhetnek meg a rendszerben.</p>
+  <p>Ha olyan API-funkcióra van szüksége, amelyet nem talál, <a href="/help/contact">lépjen velünk kapcsolatba</a>. Folyamatos fejlõdésrõl van szó, és igény esetén újabb és újabb funkciók jelenhetnek meg a rendszerben.</p>
 
   <div id="hash_link_padding"></div>
 </div>
