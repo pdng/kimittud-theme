@@ -37,7 +37,7 @@ PublicBodyCategories.add(:hu, [
         [ "polgármesteri_hivatal","polgármesteri hivatal","polgármesteri hivatal"],
         [ "rendvédelem","rendvédelem","rendvédelem"],
         [ "szakmai_kamara","szakmai kamara","szakmai kamara"],
-        [ "szociális-ellátás",szociális ellátás,szociális ellátás],
+        [ "szociális-ellátás","szociális ellátás","szociális ellátás"],
         [ "törvényszék","törvényszék","törvényszék"],
         [ "ügyészség","ügyészség","ügyészség"]
 ])
