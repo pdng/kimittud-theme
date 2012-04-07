@@ -29,7 +29,7 @@ PublicBodyCategories.add(:hu, [
         [ "köztestület","köztestület","köztestület"],
         [ "kultúra_közgyűjtemény","kultúra, közgyűjtemény","kultúra, közgyűjtemény"],
         [ "minisztérium","minisztérium","minisztérium"],
-        [ "munkaügyi_bíróság",munkaügyi bíróság",munkaügyi bíróság"],
+        [ "munkaügyi_bíróság","munkaügyi bíróság","munkaügyi bíróság"],
         [ "oktatás","oktatás","oktatás"],
         [ "önkormányzat","önkormányzat","önkormányzat"],
         [ "önkormányzati_fenntartású_közintézmény","önkormányzati fenntartású közintézmény","önkormányzati fenntartású közintézmény"],
